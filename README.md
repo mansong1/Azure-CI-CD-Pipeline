@@ -26,8 +26,7 @@ We will build and deploye a containerised flask application that serves out pred
 
 ### Azure Pipelines
 
-1. Create an Azure pipeline referring to these [instructions]((https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops)
-
+1. Create an Azure pipeline referring to these [instructions](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops)
 
 
 ### Making a Prediction
@@ -44,5 +43,21 @@ Port: 443
 
 ## Enhancements
 
+* Add and deploy a frontend service
 
 ## Demo
+
+
+## Project Files
+
+* __app.py:__ The Flask application 
+* __requirements.txt:__ Prerequisites of Python packages for Flask app
+* __model_data/boston_housing_prediction.joblib:__ Pretrained sklearn model used by the flask app
+* __Dockerfile:__ Instructions of how to build our application container
+* __Makefile:__ Commands to setup, install and lint the applicaiton
+* __run_docker.sh:__ Builds and runs the docker container
+* __run_kubernetes.sh:__ Runs Flask app as a pod in kubernetes
+* __make_prediction.sh:__ Sends a POST api call to running Flask app to make a prediction
+* __make_predict_azure_apps.sh:__ Sends a POST api call to running Flask app in Azure to make a prediction
+* __upload_docker.sh:__ Tags and uploads the Docker image to DockerHub
+* __.circleci/config.yml:__ Defines the circleCI deployment

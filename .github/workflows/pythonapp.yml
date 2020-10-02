@@ -9,6 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: brpaz/hadolint-action@v1.1.0
     - name: Set up Python 3.5
       uses: actions/setup-python@v1
       with:
@@ -16,10 +17,6 @@ jobs:
     - name: Install dependencies
       run: |
         make install
-    - name: Hadolint Action
-      uses: brpaz/hadolint-action@v1.1.0  
-      run: |
-        make hadolint
     - name: Lint with pylint
       run: |
         make lint

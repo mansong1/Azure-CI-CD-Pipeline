@@ -36,8 +36,9 @@ Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this f
 The output should look similar to this:
 
 ```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
+martin@Azure:~/Azure-CI-CD-Pipeline$ ./make_predict_azure_app.sh martin-flaskpipelines
 Port: 443
+AppName: martin-flaskpipelines
 {"prediction":[20.35373177134412]}
 ```
 
